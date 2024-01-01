@@ -37,7 +37,7 @@
                 
                 <img src="{!!$message->embedData(QrCode::format('png')->size(220)->generate($details['qrcode']), 'QrCode.png', 'image/png')!!}">
                     <div style="width:200px; text-align: center; ">
-                    <p style="font-size:16px">AS0236655</p>
+                    <p style="font-size:16px">{{ $details['qrcode'] }}</p>
                     </div>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:14px;">This is QR Code for Event Participation.<br>
                 Please Show this QR Code at the Event Reception for Checking In.
