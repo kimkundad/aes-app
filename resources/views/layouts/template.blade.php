@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content="heng1g">
+    <meta name="author" content="thaestheticsforum">
     <meta name="keywords" content="">
-    <meta name="description" content="{{ get_facebook_detail() }}">
+    <meta name="description" content="13-14 FEBRUARY 2024 / 8,00-12.00 HRS. WALDORF ASTORIA BANGKOK (MAGNOLIA BALLROOM, IOTH FLOOR)">
     <title> @yield('title')</title>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('img/favicon-32x32.png') }}" />
 
-    <meta property="og:url"           content="https://heng1g.com/" />
+    <meta property="og:url"           content="thaestheticsforum.com" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ get_title_facebook() }}" />
-    <meta property="og:image"         content="{{ get_facebook_img() }}?v{{time()}}" />
-    <meta property="og:description"   content="{{ get_facebook_detail() }}" />
+    <meta property="og:title"         content="Thailand aesthetic forum 2024" />
+    <meta property="og:image"         content="{{ url('home/img/1704113313619.jpg') }}?v{{time()}}" />
+    <meta property="og:description"   content="13-14 FEBRUARY 2024 / 8,00-12.00 HRS. WALDORF ASTORIA BANGKOK (MAGNOLIA BALLROOM, IOTH FLOOR)" />
     
     @include('layouts.inc-style')
     @yield('stylesheet')
