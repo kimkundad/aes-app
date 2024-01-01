@@ -1,8 +1,8 @@
 @extends('admin.layouts.template')
 
 @section('title')
-<title>สูตรบาคาร่า5ดาว -สูตรบาร์ที่ดีที่สุดและแม่นยำที่สุดในไทย อันดับ 1</title>
-<meta name="description" content=" สูตรบาคาร่า5ดาว -สูตรบาร์ที่ดีที่สุดและแม่นยำที่สุดในไทย อันดับ 1">
+<title>Thailand aesthetic forum 2024</title>
+<meta name="description" content="Thailand aesthetic forum 2024">
 @stop
 @section('stylesheet')
 
