@@ -31,6 +31,15 @@ Thailand aesthetic forum 2024
                         </div>
                     </div>
                 @endif
+
+                @if (session('email_error'))
+                <div class="text-center">
+                    <div class="alert alert-warning" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12" y2="16"></line></svg>
+                        <span class="mx-2">รูปแบบอีเมลของคุณไม่ถูกต้อง</span>
+                    </div>
+                </div>
+            @endif
                 
                     <div class="text-center">
                         <h3 class="text-headx text-white">REGISTER FOR JOINING THE EVENT</h3>

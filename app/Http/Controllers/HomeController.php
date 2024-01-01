@@ -57,6 +57,10 @@ class HomeController extends Controller
 
         //dd($characters);
 
+           $email = $request['email'];
+           $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+           if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
            $check_mail = cusday::where('email', $request['email'])->count();
 
            if($check_mail == 0){
@@ -96,8 +100,12 @@ class HomeController extends Controller
     
 
            }else{
-            return Redirect::back()->withErrors($validator)->withInput()->with('error', 'อีเมลของคุณได้ทำการลงทะเบียนไปแล้ว');
+               return Redirect::back()->withErrors($validator)->withInput()->with('error', 'อีเมลของคุณได้ทำการลงทะเบียนไปแล้ว');
            }
+
+            }else{
+                return Redirect::back()->withErrors($validator)->withInput()->with('email_error', 'อีเมลของคุณได้ทำการลงทะเบียนไปแล้ว');
+            }
            
 
 
@@ -119,6 +127,11 @@ class HomeController extends Controller
         $characters = 'AF'.$request['day'].str_pad($invID, 4, '0', STR_PAD_LEFT);
 
         //dd($characters);
+
+        $email = $request['email'];
+           $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+           if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
            $check_mail = cusday::where('email', $request['email'])->count();
 
@@ -161,6 +174,10 @@ class HomeController extends Controller
            }else{
             return Redirect::back()->withErrors($validator)->withInput()->with('error', 'อีเมลของคุณได้ทำการลงทะเบียนไปแล้ว');
            }
+
+        }else{
+            return Redirect::back()->withErrors($validator)->withInput()->with('email_error', 'อีเมลของคุณได้ทำการลงทะเบียนไปแล้ว');
+        }
 
     }
 }
