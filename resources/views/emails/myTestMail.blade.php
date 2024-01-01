@@ -26,7 +26,7 @@
             <div style="background: #01071D; border-radius: 12px; padding:25px">
 				<!--begin::Item-->
                 <div style="display:flex">
-                    <img style=" height:140px; width:237px" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                    <img style=" height:140px; width:237px" src="{{ url('/home/img/logo_email.png') }}">
                 </div>								
                 <!--begin::Media-->				
 			</div>
