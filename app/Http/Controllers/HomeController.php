@@ -30,7 +30,7 @@ class HomeController extends Controller
         if (Auth::check()) {
             return Redirect::to('admin/dashboard');
        } else {
-            return view('/');
+            return view('welcome');
        }
     }
 

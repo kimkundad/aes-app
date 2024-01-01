@@ -114,5 +114,7 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/cusday', CusdayController::class);
     Route::get('api/get_cusday', [App\Http\Controllers\CusdayController::class, 'get_cusday']);
     Route::get('api/del_cusday/{id}', [App\Http\Controllers\CusdayController::class, 'del_cusday']);
+
+    Route::get('export/csv', [App\Http\Controllers\CusdayController::class, 'exportCSVFile'])->name('export.csv');
     
 });

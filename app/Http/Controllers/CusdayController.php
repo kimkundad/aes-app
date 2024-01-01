@@ -7,6 +7,8 @@ use App\Models\cusday;
 use Illuminate\Support\Facades\DB;
 use DataTables;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Exports\ExportUsers;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CusdayController extends Controller
 {
@@ -19,6 +21,12 @@ class CusdayController extends Controller
     {
         //
         return view('admin.cusday.index');
+    }
+
+    public function exportCSVFile() 
+    {
+
+        return Excel::download(new ExportUsers , 'All-User.csv');
     }
 
     /**
