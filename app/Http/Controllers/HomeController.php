@@ -34,6 +34,10 @@ class HomeController extends Controller
        }
     }
 
+    public function live(){
+        return view('live');
+    }
+
     public function post_add_data(Request $request){
 
         // $this->validate($request, [

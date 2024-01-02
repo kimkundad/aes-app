@@ -15,7 +15,9 @@ Thailand aesthetic forum 2024
     <div class="chakra-container">
         <div id="content" class="flex ">
             <div class="text-center">
-                <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                <a href="{{ url('/13online') }}">
+                    <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                </a>
             </div>
             
                 <div class="card-body" style="padding: 0.5rem 0.5rem;">
@@ -39,7 +41,7 @@ This website is intended to be accessed only by selected qualified healthcare pr
                         </p>
                         <div class="box-height-10"></div>
                         <div class="text-center">
-                        <a href="{{ url('/13onground_3') }}" class=" text-accepted">ACCEPTED</a>
+                        <a href="{{ url('/13online_3') }}" style="font-size: 14px;" class="btn mb-1 btn-5">ACCEPTED</a>
                         </div>
                         
                     </div>

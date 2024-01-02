@@ -41,7 +41,7 @@ This website is intended to be accessed only by selected qualified healthcare pr
                         </p>
                         <div class="box-height-10"></div>
                         <div class="text-center">
-                        <a href="{{ url('/14onground_3') }}" class=" text-accepted">ACCEPTED</a>
+                        <a href="{{ url('/14onground_3') }}" style="font-size: 14px;" class="btn mb-1 btn-5">ACCEPTED</a>
                         </div>
                         
                     </div>

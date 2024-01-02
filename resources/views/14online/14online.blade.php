@@ -22,7 +22,7 @@ Thailand aesthetic forum 2024
                     <div class="box-height-20"></div>
                 <div class="card-body" style="padding: 0.5rem 0.5rem;">
                     <div class="text-center">
-                        <img class="img-fluid " style="width:280px; height:154px" src="{{ url('/home/img/Asset 6@2x 1.png') }}">
+                        <img class="img-fluid " style="width:280px; height:154px" src="{{ url('/home/img/Asset_6_2x_1.png') }}">
                     </div>
                     <div class="box-height-20"></div>
                     <div class="box-height-20"></div>

@@ -19,7 +19,7 @@ use App\Http\Controllers\CusdayController;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/live', [App\Http\Controllers\HomeController::class, 'live'])->name('live');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 

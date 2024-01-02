@@ -15,7 +15,9 @@ Thailand aesthetic forum 2024
     <div class="chakra-container">
         <div id="content" class="flex ">
             <div class="text-center">
-                <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                <a href="{{ url('/13online') }}">
+                    <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                </a>
             </div>
             <form method="POST" id="myForm" action="{{ url('api/post_add_data') }}">
                 {{ csrf_field() }}
