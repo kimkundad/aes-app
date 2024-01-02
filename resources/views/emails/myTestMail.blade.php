@@ -35,7 +35,7 @@
                 <h1 style="color:#01071D; margin: 0px;">OUR LIVE WEB FORUM.</h1>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:18px;">Scheduled for Feb {{ $details['day'] }}, 2024 at 8:00 AM via our online platform.</p>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:16px;">Here is your access link to join the Live Web Forum</p>
-                <a href="#" style="background-color:#01071D;  margin-top:20px; text-decoration: none; display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 18px; font-weight:500;">LIVE ACCESS LINK</a>
+                <a href="{{ url('/live') }}" style="background-color:#01071D;  margin-top:20px; text-decoration: none; display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 18px; font-weight:500;">LIVE ACCESS LINK</a>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:13px;">Please click the link at the scheduled time to ensure you don't miss out on valuable information and discussions.</p>
             </div>
     
