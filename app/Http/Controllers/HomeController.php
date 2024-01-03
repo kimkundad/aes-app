@@ -95,10 +95,10 @@ class HomeController extends Controller
 
 
             if($request['type'] == 1){
-                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail2($details));
+                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail($details));
                 return view('13online_4', $data)->with('success','คุณทำการเพิ่มอสังหา สำเร็จ');
             }else{
-                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail($details));
+                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail2($details));
                 return view('13onground_4', $data)->with('success','คุณทำการเพิ่มอสังหา สำเร็จ');
             }
     
@@ -167,10 +167,10 @@ class HomeController extends Controller
 
            
             if($request['type'] == 1){
-                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail2($details));
+                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail($details));
                 return view('14online.14online_4', $data)->with('success','คุณทำการเพิ่มอสังหา สำเร็จ');
             }else{
-                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail($details));
+                \Mail::to($request['email'])->send(new \App\Mail\MyTestMail2($details));
                 return view('14onground.14onground_4', $data)->with('success','คุณทำการเพิ่มอสังหา สำเร็จ');
             }
     
