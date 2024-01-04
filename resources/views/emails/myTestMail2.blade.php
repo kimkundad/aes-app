@@ -36,9 +36,7 @@
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:20px;">Feb {{ $details['day'] }}, 2024 Time 8:00 AM</p>
                 
                 <img src="{!!$message->embedData(QrCode::format('png')->size(220)->generate($details['qrcode']), 'QrCode.png', 'image/png')!!}">
-                    <div style="width:200px; text-align: center; ">
                     <p style="font-size:16px">{{ $details['qrcode'] }}</p>
-                    </div>
                 <p style="font-size:16px; font-weight: 600">Please download / save / capture screen the QR code <br> 
                     and show to QR code to join the event at the specified time and date
                     <br>
