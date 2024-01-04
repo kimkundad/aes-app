@@ -30,13 +30,15 @@
                 </div>								
                 <!--begin::Media-->				
 			</div>
-            <div>
-                <h1 style="color:#01071D; margin: 0px; margin-top:40px">THANK YOU FOR REGISTERING</h1>
-                <h1 style="color:#01071D; margin: 0px;">OUR LIVE WEB FORUM.</h1>
-                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:18px;">Scheduled for Feb {{ $details['day'] }}, 2024 at 8:00 AM via our online platform.</p>
+            <h2 style="color:#01071D; margin: 0px; font-size:18px;">Hi {{ $details['name'] }}</h2>
+            <div style="text-align: center;">
+                <h1 style="color:#01071D; margin: 0px; margin-top:40px">Thank You</h1>
+                <h2 style="color:#01071D; margin: 0px;">Your registration is confirmed for the LIVE WEBINAR</h2>
+                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:16px;"> “Thailand Aesthetics Business Forum 2024"</p>
+                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:16px;">SAVE THE DATE, Feb {{ $details['day'] }}, 2024 9:00 AM Pacific Time  </p>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:16px;">Here is your access link to join the Live Web Forum</p>
                 <a href="{{ url('/live') }}" style="background-color:#01071D;  margin-top:20px; text-decoration: none; display:inline-block; padding:11px 19px; color: #FFFFFF; font-size: 18px; font-weight:500;">LIVE ACCESS LINK</a>
-                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:13px;">Please click the link at the scheduled time to ensure you don't miss out on valuable information and discussions.</p>
+                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:13px;">Keep in touch we’ll send your Webinar passcode 1 Day before LIVE WEBINAR</p>
             </div>
     
 	</body>

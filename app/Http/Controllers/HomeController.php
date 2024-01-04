@@ -89,6 +89,7 @@ class HomeController extends Controller
             $details = [
                 'qrcode' => $characters,
                 'day' => $request['day'],
+                'name' => $request['name'],
                 ];
 
                 $data['characters'] = $characters;
@@ -161,6 +162,7 @@ class HomeController extends Controller
             $details = [
                 'qrcode' => $characters,
                 'day' => $request['day'],
+                'name' => $request['name'],
                 ];
 
                 $data['characters'] = $characters;

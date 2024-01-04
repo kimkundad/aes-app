@@ -2,9 +2,9 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head>
-		<title>Thailand aesthetic forum 2024</title>
+		<title>THANK YOU TO JOIN WITH US</title>
 		<meta charset="utf-8" />
-		<meta name="description" content="Thailand aesthetic forum 2024" />
+		<meta name="description" content="THANK YOU TO JOIN WITH US" />
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--begin::Fonts(mandatory for all pages)-->
@@ -30,17 +30,22 @@
                 </div>								
                 <!--begin::Media-->				
 			</div>
-            <div>
-                <h1 style="color:#01071D; margin: 0px; margin-top:40px">THANK YOU</h1>
-                <h1 style="color:#01071D; margin: 0px;">FOR REGISTERING OUR EVENTS.</h1>
+            <div style="text-align: center;">
+                <h1 style="color:#01071D; margin: 0px; margin-top:40px">Thank You for registering</h1>
+                <h2 style="color:#01071D; margin: 0px;">“Thailand Aesthetics Business Forum 2024"</h2>
                 <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:20px;">Feb {{ $details['day'] }}, 2024 Time 8:00 AM</p>
                 
                 <img src="{!!$message->embedData(QrCode::format('png')->size(220)->generate($details['qrcode']), 'QrCode.png', 'image/png')!!}">
                     <div style="width:200px; text-align: center; ">
                     <p style="font-size:16px">{{ $details['qrcode'] }}</p>
                     </div>
-                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:14px;">This is QR Code for Event Participation.<br>
-                Please Show this QR Code at the Event Reception for Checking In.
+                <p style="font-size:16px; font-weight: 600">Please download / save / capture screen the QR code <br> 
+                    and show to QR code to join the event at the specified time and date
+                    <br>
+                    Hope to see you there!
+                </p>
+                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:14px;">Date Time : Feb 13, 2024 9:00 AM Pacific Time<br>
+                    Waldorf Astoria Bangkok Hotel Magnolia Ballroom, 10th   Floor
                 </p>
             </div>
     

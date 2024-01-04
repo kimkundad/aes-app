@@ -30,7 +30,7 @@ class MyTestMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Mail from Thailand aesthetic forum 2024')
+        return $this->subject('THANK YOU TO JOIN WITH US')
                     ->view('emails.myTestMail');
     }
 }
