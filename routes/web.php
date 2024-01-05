@@ -92,7 +92,7 @@ Route::get('/14online_4', function () {
 
 
 Route::get('/mail', function () {
-    return view('emails.myTestMail');
+    return view('emails.email');
 });
 
 Route::get('/mail2', function () {

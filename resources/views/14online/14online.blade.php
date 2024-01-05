@@ -12,7 +12,7 @@ Thailand aesthetic forum 2024
 @section('content')
 
 <div id="main" class="layout-column flex">
-    <div class="chakra-container">
+    <div class="chakra-containerx2">
         <div id="content" class="flex ">
             <div class="text-center">
                 <a href="{{ url('/14online') }}">
@@ -21,8 +21,13 @@ Thailand aesthetic forum 2024
             </div>
                     <div class="box-height-20"></div>
                 <div class="card-body" style="padding: 0.5rem 0.5rem;">
-                    <div class="text-center">
-                        <img class="img-fluid " style="width:280px; height:154px" src="{{ url('/home/img/Asset_6_2x_1.png') }}">
+                    <div class="img-mo">
+                        <div class="text-center">
+                            <img class="img-fluid " style="width:280px; height:154px" src="{{ url('/home/img/Asset_6_2x_1.png') }}">
+                        </div>
+                    </div>
+                    <div class="img-dek">
+                        <img class="img-fluid w-100 p-20" src="{{ url('/home/img/14/Asset 2@4x 1.png') }}">
                     </div>
                     <div class="box-height-20"></div>
                     <div class="box-height-20"></div>
@@ -39,7 +44,12 @@ Thailand aesthetic forum 2024
         </div>
     </div>
     
-    <div class="text-center hid-mobile">
+    <div class="text-center hid-mobile" style="position: fixed;
+        width: 100%;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;">
             <h3 class="text-fotter-x">
                UNLIMITED POSSIBILITIES
             </h3>
