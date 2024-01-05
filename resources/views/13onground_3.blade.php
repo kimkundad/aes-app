@@ -27,7 +27,7 @@ Thailand aesthetic forum 2024
             <div class="hid-mobile-hi" style="height: 30px"></div>
             <div class="text-center">
                 <a href="{{ url('/13onground') }}">
-                    <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">
+                    <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo-Thailand-Aesthetics-Business-Forum2024.png') }}">
                 </a>
             </div>
             <form method="POST" id="myForm" action="{{ url('api/post_add_data') }}">

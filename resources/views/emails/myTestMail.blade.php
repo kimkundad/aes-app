@@ -38,7 +38,7 @@
                 SAVE THE DATE, Feb {{ $details['day'] }}, 2024 9:00 AM Pacific Time
                 </p>
                 {{-- <a href="{{ url('/live') }}" ><img src="{{ url('home/img/Watch-Now.png') }}" style="width:206px; margin-top:20px; height:50px"></a> --}}
-                <p style="color:#01071D; margin: 0px; margin-top:40px; font-size:13px;">Keep in touch we’ll send your Webinar passcode 1 Day before LIVE WEBINAR</p>
+                <p style="color:#01071D; margin: 0px; margin-top:60px; font-size:13px;">Keep in touch we’ll send your Webinar passcode 1 Day before LIVE WEBINAR</p>
             </div>
     
 	</body>
