@@ -14,6 +14,17 @@ Thailand aesthetic forum 2024
 <div id="main" class="layout-column flex">
     <div class="chakra-containerx2">
         <div id="content" class="flex ">
+            <div class="img-mo" >
+                <div class="d-flex justify-content-center">
+                    <img src="{{ url('/home/img/ma-logo-primary-white-rgb.svg') }}" style="width:149px; height:13px; margin-top:30px">
+                </div>
+            </div>
+            <div class="img-dek-top " style="margim-bottom:30px">
+                <div class="d-flex justify-content-end" style="right: 5%; top: 0px; position: fixed;">
+                    <img src="{{ url('/home/img/ma-logo-primary-white-rgb.svg') }}" style="width:229px; height:20x; margin-top:30px" >
+                </div>
+            </div>
+            <div class="hid-mobile-hi" style="height: 30px"></div>
             <div class="text-center">
                 <a href="{{ url('/14online') }}">
                     <img class="img-fluid logo_website2" src="{{ url('/home/img/Logo@2x 1.png') }}">

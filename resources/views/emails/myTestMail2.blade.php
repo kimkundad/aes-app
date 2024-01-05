@@ -26,7 +26,7 @@
             <div style="background: #01071D; border-radius: 12px; padding:25px">
 				<!--begin::Item-->
                 <div style="display:flex">
-                    <img style=" height:140px; width:237px" src="{{ url('/home/img/logo_email.png') }}">
+                    <img style=" height:140px; width:237px" src="{{ url('/home/img/Logo-Thailand-Aesthetics-Business-Forum2024.png') }}">
                 </div>								
                 <!--begin::Media-->				
 			</div>
@@ -41,7 +41,7 @@
                 <p style="font-size:16px; ">Please download / save / capture screen the QR code <br> 
                     and show to QR code to join the event at the specified time and date
                 </p>
-                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:14px;">Date Time : Feb {{ $details['day'] }}, 2024 9:00 AM Pacific Time<br>
+                <p style="color:#01071D; margin: 0px; margin-top:20px; font-size:14px;">Date Time : Feb {{ $details['day'] }}, 2024 8:00 AM Pacific Time<br>
                 Waldorf Astoria Bangkok Hotel Magnolia Ballroom, 10th   Floor
                 </p>
                 <h3 style="color:#01071D; margin-top: 25px;">Hope to see you there!</h3>

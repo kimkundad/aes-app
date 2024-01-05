@@ -299,8 +299,23 @@ span, p , li ,strong, option , label, input, a, b {
   .img-dek{
     display: inline-flex;
   }
+  .img-dek-top{
+    display: block;
+  }
+
+  .hid-mobile-hi{
+    display: block;
+  }
 
   @media (max-width: 768px) {
+
+    .hid-mobile-hi{
+      display: none;
+    }
+
+    .img-dek-top{
+      display: none;
+    }
 
     .img-mo{
       display: block;
@@ -334,8 +349,11 @@ span, p , li ,strong, option , label, input, a, b {
 
   }
 
+  
 
   @media (max-width: 421px) {
+
+    
 
     .hid-mobile{
       display: none;
