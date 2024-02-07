@@ -3,20 +3,27 @@
 <script>   
 var defaultThemeMode = "dark"; 
 var themeMode; 
+console.log('defaultThemeMode', document.documentElement.hasAttribute("data-theme"))
+localStorage.setItem("data-theme", "dark")
 if ( document.documentElement ) 
 { 
     if ( document.documentElement.hasAttribute("data-theme-mode")) 
     { 
         themeMode = document.documentElement.getAttribute("data-theme-mode"); 
+        console.log('1',)
     } else { 
 
         if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); 
+        console.log('2.2', )
+        document.documentElement.setAttribute("data-theme-mode", 'dark'); 
         } else { 
             themeMode = defaultThemeMode; 
+            console.log('2',)
         } 
         
     } if (themeMode === "system") { 
         themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; 
+        console.log('3',)
     } 
     document.documentElement.setAttribute("data-theme", themeMode); 
 }
