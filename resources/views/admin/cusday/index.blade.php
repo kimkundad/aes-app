@@ -1,7 +1,7 @@
 @extends('admin.layouts.template')
 
 @section('title')
-    <title>คำสั่งซื้อทั้งหมด</title>
+    <title>รายชื่อผู้ลงทะเบียนทั้งหมด</title>
 @stop
 @section('stylesheet')
 
@@ -36,7 +36,7 @@
                 <!--begin::Page title-->
                 <div class="page-title d-flex flex-column justify-content-center flex-wrap me-3">
                     <!--begin::Title-->
-                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">คำสั่งซื้อทั้งหมด</h1>
+                    <h1 class="page-heading d-flex text-dark fw-bold fs-3 flex-column justify-content-center my-0">รายชื่อผู้ลงทะเบียนทั้งหมด</h1>
                     <!--end::Title-->
                 </div>
                 <!--end::Page title-->
@@ -57,7 +57,7 @@
                         </span>
                         <!--end::Svg Icon-->
                         <!--end::Svg Icon-->
-                        Export รายชื่อทั้งหมด</a>
+                        Export รายชื่อผู้ลงทะเบียนทั้งหมด</a>
                         
                     </div>
                     <!--end::Filter menu-->
@@ -143,9 +143,11 @@
                                         <th>ชื่อ clinic </th>
                                         <th>อีเมล </th>
                                         <th>ประเภท </th>
-                                        <th>ร่วมงานวันที่ </th>
-                                        <th>วันที่ลงทะเบียน </th>
-                                        <th>Actions</th>
+                                        <th class="min-w-100px">ร่วมงานวันที่ </th>
+                                        <th class="min-w-100px">Checkin </th>
+                                        <th class="min-w-175px">วันที่ลงทะเบียน </th>
+                                        <th class="min-w-175px">เวลาเช็คอิน </th>
+                                        <th class="min-w-100px">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -174,6 +176,35 @@
 <script >
 
 
+$(document).on('click', '.clickme', function() {
+        
+        var user_id = $(this).closest('tr').attr('id');
+        console.log('user_id', user_id)
+        $.ajax({
+                type:'POST',
+                url:'{{url('api/api_post_status_follow')}}',
+                headers: {'X-CSRF-TOKEN': '{{ csrf_token() }}' },
+                data: { "user_id" : user_id },
+                success: function(data){
+                    if(data.data.success){
+
+                    Swal.fire({
+                        text: "ระบบได้ทำการอัพเดทข้อมูลสำเร็จ!",
+                        icon: "success",
+                        buttonsStyling: false,
+                        confirmButtonText: "Ok, got it!",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        }
+                    });
+
+    
+                  }
+                }
+            });
+        });
+
+
 $(function () {
       
       var table = $('.data-table').DataTable({
@@ -199,7 +230,9 @@ $(function () {
               {data: 'email', name: 'email'},
               {data: 'types', name: 'types'},
               {data: 'day', name: 'day'},
+              {data: 'status', name: 'status'},
               {data: 'datex', name: 'datex'},
+              {data: 'time_checkin', name: 'time_checkin'},
               {data: 'action', name: 'action', orderable: false, searchable: false},
           ]
       });

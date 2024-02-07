@@ -46,6 +46,60 @@ class CusdayController extends Controller
      * @return \Illuminate\Http\Response
      */
 
+     public function get_qr($day, $code){
+       // dd($code);
+
+       $objs = cusday::where('day', $day)
+               ->where('code', $code)
+               ->first();
+               $data['objs'] = $objs;
+        
+            if($objs){
+                return view('checkin', $data);
+            }else{
+                return view('checkin_404', $data);
+            }
+
+     }
+
+     public function api_post_status_user(Request $request){
+
+        $id = $request->user_id;
+
+        $objs = cusday::find($id);
+        $objs->status = 1;
+        $objs->time_checkin = date("Y-m-d H:i:s");
+        $objs->save();
+
+        return response()->json([
+         'data' => [
+           'success' => 'success',
+           'date_time' => date("Y-m-d H:i:s")
+         ]
+       ]);
+
+ }
+
+    public function api_post_status_follow(Request $request){
+
+        $user = cusday::findOrFail($request->user_id);
+
+              if($user->status == 1){
+                  $user->status = 0;
+              } else {
+                  $user->status = 1;
+                  $user->time_checkin = date("d-m-Y H:i:s");
+              }
+
+
+      return response()->json([
+      'data' => [
+        'success' => $user->save(),
+      ]
+    ]);
+
+    }
+
 
     public function get_cusday(Request $request){
 
@@ -69,6 +123,9 @@ class CusdayController extends Controller
           //  dd($data);
             return Datatables::of($data)
                     ->addIndexColumn()
+                    ->setRowId(function ($row) {
+                        return $row->id;
+                    })
                     ->addColumn('action', function($row){
        
                             $btn = '<a href="'.url('admin/cusday/'.$row->id.'/edit').'" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
@@ -107,6 +164,26 @@ class CusdayController extends Controller
 
                     return $btn;
             })
+            ->addColumn('status', function($row){
+       
+                if($row->status == 1){
+                    $sta = '<div id="clickme'.$row->id.'" class="clickme form-check form-check-solid form-switch form-check-custom fv-row">
+                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 
+                            checked="checked"
+                            value="1"/>
+                            <label class="form-check-label" for="allowmarketing"></label>
+                        </div>';
+                }else{
+                    $sta = '<div id="clickme'.$row->id.'" class="clickme form-check form-check-solid form-switch form-check-custom fv-row">
+                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowmarketing" name="status" 
+                            value="1"/>
+                            <label class="form-check-label" for="allowmarketing"></label>
+                        </div>';
+                }
+                
+
+                return $sta;
+        })
             ->addColumn('qrcode', function($row){
                     
                 $btn = '<div class="symbol symbol-50px me-2">
@@ -117,7 +194,7 @@ class CusdayController extends Controller
 
                 return $btn;
         })
-                    ->rawColumns(['action', 'datex', 'types', 'qrcode'])
+                    ->rawColumns(['action', 'datex', 'types', 'qrcode', 'status'])
                     ->make(true);
         }
             

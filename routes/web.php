@@ -114,7 +114,12 @@ Route::group(['middleware' => ['UserRole:superadmin|admin']], function() {
     Route::resource('/admin/cusday', CusdayController::class);
     Route::get('api/get_cusday', [App\Http\Controllers\CusdayController::class, 'get_cusday']);
     Route::get('api/del_cusday/{id}', [App\Http\Controllers\CusdayController::class, 'del_cusday']);
+    Route::post('api/api_post_status_follow', [App\Http\Controllers\CusdayController::class, 'api_post_status_follow']);
 
     Route::get('export/csv', [App\Http\Controllers\CusdayController::class, 'exportCSVFile'])->name('export.csv');
+    Route::get('checkin/{day}/{code}', [App\Http\Controllers\CusdayController::class, 'get_qr']);
+
+    Route::get('/checkin_404', [App\Http\Controllers\CusdayController::class, 'checkin_404']);
+    Route::post('/api/api_post_status_user', [App\Http\Controllers\CusdayController::class, 'api_post_status_user']);
     
 });

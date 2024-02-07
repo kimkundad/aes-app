@@ -1,7 +1,7 @@
 
 
 <script>   
-var defaultThemeMode = "light"; 
+var defaultThemeMode = "dark"; 
 var themeMode; 
 if ( document.documentElement ) 
 { 
