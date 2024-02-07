@@ -188,7 +188,7 @@ class CusdayController extends Controller
                     
                 $btn = '<div class="symbol symbol-50px me-2">
                             <span class="symbol-label">
-                            '.QrCode::size(100)->generate($row->code).'
+                            '.QrCode::size(100)->generate('https://thaestheticsforum.com/checkin/'.$row->day.'/'.$row->code).'
                             </span>
                         </div>';
 

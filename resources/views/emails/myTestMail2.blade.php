@@ -34,7 +34,7 @@
                 <h2 style="color:#01071D; margin: 0px; margin-top:40px">Thank you For Registering</h2>
                 <h2 style="color:#01071D; margin: 0px;">“Thailand Aesthetics Business Forum 2024"</h2>
                 
-                <img src="{!!$message->embedData(QrCode::format('png')->size(220)->generate($details['qrcode']), 'QrCode.png', 'image/png')!!}">
+                <img src="{!!$message->embedData(QrCode::format('png')->size(220)->generate('https://thaestheticsforum.com/checkin/'.$details['day'].'/'.$details['qrcode']), 'QrCode.png', 'image/png')!!}">
                     <div style="width:200px; text-align: center; ">
                     <p style="font-size:16px">{{ $details['qrcode'] }}</p>
                     </div>
