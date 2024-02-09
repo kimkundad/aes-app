@@ -136,7 +136,7 @@
                                 <thead>
                                     <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                         <th class="min-w-50px">ลำดับที่</th>
-                                        <th> </th>
+                                        <th class="min-w-100px">Checkin </th>
                                         <th>หมายเลข </th>
                                         <th>ชื่อ </th>
                                         <th>นามสกุล </th>
@@ -144,7 +144,6 @@
                                         <th>อีเมล </th>
                                         <th>ประเภท </th>
                                         <th class="min-w-100px">ร่วมงานวันที่ </th>
-                                        <th class="min-w-100px">Checkin </th>
                                         <th class="min-w-175px">วันที่ลงทะเบียน </th>
                                         <th class="min-w-175px">เวลาเช็คอิน </th>
                                         <th class="min-w-100px">Actions</th>
@@ -222,7 +221,7 @@ $(function () {
             { data: 'id', "render": function(data, type, row, meta){
             return meta.row + 1; // สร้างลำดับตั้งแต่ 1, 2, 3, …
             }},
-            {data: 'qrcode', name : 'qrcode'},
+              {data: 'status', name: 'status'},
               {data: 'code', name : 'code'},
               {data: 'name', name : 'name'},
               {data: 'surname', name: 'surname'},
@@ -230,7 +229,6 @@ $(function () {
               {data: 'email', name: 'email'},
               {data: 'types', name: 'types'},
               {data: 'day', name: 'day'},
-              {data: 'status', name: 'status'},
               {data: 'datex', name: 'datex'},
               {data: 'time_checkin', name: 'time_checkin'},
               {data: 'action', name: 'action', orderable: false, searchable: false},
