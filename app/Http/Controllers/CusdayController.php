@@ -20,7 +20,13 @@ class CusdayController extends Controller
     public function index()
     {
         //
-        return view('admin.cusday.index');
+
+        $onground13 = cusday::where('day', 13)->where('type', 0)->where('status', 1)->count();
+        $onground14 = cusday::where('day', 14)->where('type', 0)->where('status', 1)->count();
+
+        $data['onground13'] = $onground13;
+        $data['onground14'] = $onground14;
+        return view('admin.cusday.index', $data);
     }
 
     public function exportCSVFile() 
@@ -86,6 +92,7 @@ class CusdayController extends Controller
 
               if($user->status == 1){
                   $user->status = 0;
+                  $user->time_checkin = null;
               } else {
                   $user->status = 1;
                   $user->time_checkin = date("d-m-Y H:i:s");

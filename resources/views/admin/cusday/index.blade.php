@@ -29,6 +29,20 @@
 <div class="app-main flex-column flex-row-fluid" id="kt_app_main">
     <!--begin::Content wrapper-->
     <div class="d-flex flex-column flex-column-fluid">
+
+        <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
+            <!--begin::Toolbar container-->
+            <div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+                <!--begin::Page title-->
+                <div class="d-flex align-items-center ">
+                    <!--begin::Filter menu-->
+                     <div class="m-0">
+                        <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" id="count">ผู้เข้าร่วมวันที่ 13 เช็คอิน ( {{ $onground13 }} ) คน</a>
+                        <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" id="count">ผู้เข้าร่วมวันที่ 14 เช็คอิน ( {{ $onground14 }} ) คน</a>
+                     </div>
+                </div>
+            </div>
+        </div>
         
         <div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
             <!--begin::Toolbar container-->
@@ -40,10 +54,13 @@
                     <!--end::Title-->
                 </div>
                 <!--end::Page title-->
+                
                 <!--begin::Actions-->
                 <div class="d-flex align-items-center gap-2 gap-lg-3">
                     <!--begin::Filter menu-->
                      <div class="m-0">
+
+                        
                         <!--begin::Menu toggle-->
                         <a href="{{ route('export.csv') }}" class="btn btn-sm btn-success btn-flex" >
                         <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
