@@ -115,7 +115,7 @@ class CusdayController extends Controller
                 $data = cusday::orderby('created_at', 'desc');
   
             if ($request->filled('search_name')) {
-                $data = $data->where('name', 'like', "%" . $request->search_name . "%")->orwhere('code', 'like', "%" . $request->search_name . "%");
+                $data = $data->where('name', 'like', "%" . $request->search_name . "%")->orwhere('code', 'like', "%" . $request->search_name . "%")->orwhere('clinic_name', 'like', "%" . $request->search_name . "%");
             }
             if ($request->filled('day')) {
                 if($request->day !== 0){
