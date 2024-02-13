@@ -115,7 +115,7 @@
                                                 </div>
                                                 @else
                                                 <div style="margin-bottom: 15px">
-													<img alt="Logo" src="{{ url('img/icon-positive-vote-2.svg') }}">
+													<img alt="Logo" src="{{ url('img/check.png') }}">
 												</div>
                                                 <p style="margin-bottom:9px; color:#ffffff; font-size: 18px; font-weight:700">ลงทะเบียนเข้างานเรียบร้อยแล้ว!</p>
                                                 @endif
