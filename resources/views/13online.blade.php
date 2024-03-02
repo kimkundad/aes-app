@@ -48,7 +48,7 @@ Thailand aesthetic forum 2024
                     <div class="box-height-20"></div>
                     <div class="box-height-20"></div>
                     <div class="text-center">
-                        {{-- <a href="{{ url('/13online_2') }}" class="btn mb-1 btn-5">REGISTER FOR THE EVENT</a> --}}
+                        <a href="{{ url('/13online_2') }}" class="btn mb-1 btn-5">REGISTER FOR THE EVENT</a>
                     </div>
                 </div>
         </div>
